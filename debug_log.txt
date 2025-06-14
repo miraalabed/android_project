@@ -1,0 +1,7 @@
+DATA RECEIVED: {"sender_type":"Teacher","receiver_id":"11","title":"gtb","sender_id":"3","content":"rtb","receiver_type":"Student"}
+DATA RECEIVED: {"sender_type":"Teacher","receiver_id":"11","title":"jbh","sender_id":"3","content":"jhbbh hj","receiver_type":"Student"}
+DATA RECEIVED: {"sender_type":"Teacher","receiver_id":"11","title":"jb","sender_id":"3","content":"hk","receiver_type":"Student"}
+DATA RECEIVED: {"sender_type":"Teacher","receiver_id":"11","title":"tlnkgnlt","sender_id":"3","content":"nrtlt","receiver_type":"Student"}
+DATA RECEIVED: {"sender_type":"Teacher","receiver_id":"12","title":"mak","sender_id":"3","content":"kme","receiver_type":"Student"}
+DATA RECEIVED: {"sender_type":"Teacher","receiver_id":"11","title":"nagham","sender_id":"3","content":"kn","receiver_type":"Student"}
+DATA RECEIVED: {"sender_type":"Teacher","receiver_id":"10","title":"rlnkr","sender_id":"3","content":"nvklrelr","receiver_type":"Student"}

@@ -17,9 +17,17 @@ $birth_date = $_POST['birth_date'] ?? '';
 $email = $_POST['email'] ?? '';
 $pass = $_POST['pass'] ?? '';
 $role = $_POST['role'] ?? 'student';
+$class_grade = $_POST['class_grade'] ?? '';
 
-$stmt = $conn->prepare("INSERT INTO users (full_name, national_id, address, birth_date, email, pass, role) VALUES (?, ?, ?, ?, ?, ?, ?)");
-$stmt->bind_param("sssssss", $full_name, $national_id, $address, $birth_date, $email, $pass, $role);
+if (empty($full_name) || empty($national_id) || empty($birth_date) || empty($email) || empty($pass)) {
+    echo json_encode(["status" => "error", "message" => "Missing input values"]);
+    exit;
+}
+
+$stmt = $conn->prepare("INSERT INTO users (full_name, national_id, address, birth_date, email, pass, role, class_grade) 
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+
+$stmt->bind_param("sssssssi", $full_name, $national_id, $address, $birth_date, $email, $pass, $role, $class_grade);
 
 if ($stmt->execute()) {
     echo json_encode(["status" => "success", "message" => "Student added successfully"]);

@@ -1,4 +1,8 @@
 <?php
+// get_subjects.php
+header('Content-Type: application/json');
+header("Access-Control-Allow-Origin: *");
+
 $host = "localhost";
 $db = "schoolsystem";
 $user = "root";
@@ -7,35 +11,35 @@ $pass = "";
 $conn = new mysqli($host, $user, $pass, $db);
 
 if ($conn->connect_error) {
-    die(json_encode(['status' => 'error', 'message' => 'Connection failed']));
+    die(json_encode([
+        'status' => 'error',
+        'message' => 'Connection failed: ' . $conn->connect_error
+    ]));
 }
 
-$search = isset($_GET['search']) ? $_GET['search'] : '';
+$teacher_id = isset($_GET['teacher_id']) ? intval($_GET['teacher_id']) : 0;
 
-$sql = "SELECT s.subject_name, s.description, u.full_name AS teacher_name
-        FROM subjects s
-        LEFT JOIN users u ON s.teacher_id = u.id
-        WHERE s.subject_name LIKE ? OR s.description LIKE ?";
+if ($teacher_id <= 0) {
+    echo json_encode([
+        'status' => 'error',
+        'message' => 'Invalid or missing teacher_id'
+    ]);
+    exit;
+}
 
+$sql = "SELECT subject_id, subject_name FROM subjects WHERE teacher_id = ?";
 $stmt = $conn->prepare($sql);
-
-if (!$stmt) {
-    die(json_encode(['status' => 'error', 'message' => 'Prepare failed: ' . $conn->error]));
-}
-
-$searchTerm = "%" . $search . "%";
-$stmt->bind_param("ss", $searchTerm, $searchTerm);
+$stmt->bind_param("i", $teacher_id);
 $stmt->execute();
-
 $result = $stmt->get_result();
-$subjects = [];
 
+$subjects = [];
 while ($row = $result->fetch_assoc()) {
     $subjects[] = $row;
 }
 
-header('Content-Type: application/json');
 echo json_encode($subjects);
 
+$stmt->close();
 $conn->close();
 ?>

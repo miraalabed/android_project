@@ -1,0 +1,32 @@
+<?php
+$host = "localhost";
+$db = "schoolsystem"; 
+$user = "root";
+$pass = "";
+
+$conn = new mysqli($host, $user, $pass, $db);
+if ($conn->connect_error) {
+    die(json_encode(['status' => 'error', 'message' => 'Connection failed: ' . $conn->connect_error]));
+}
+
+$subject_name = isset($_POST['subject_name']) ? $_POST['subject_name'] : '';
+$description = isset($_POST['description']) ? $_POST['description'] : '';
+$teacher_id = isset($_POST['teacher_id']) ? $_POST['teacher_id'] : '';
+
+if (empty($subject_name) || empty($description) || empty($teacher_id)) {
+    echo json_encode(['status' => 'error', 'message' => 'Missing parameters']);
+    exit;
+}
+
+$stmt = $conn->prepare("INSERT INTO subjects (subject_name, description, teacher_id) VALUES (?, ?, ?)");
+$stmt->bind_param("ssi", $subject_name, $description, $teacher_id);
+
+if ($stmt->execute()) {
+    echo json_encode(['status' => 'success', 'message' => 'Subject added successfully']);
+} else {
+    echo json_encode(['status' => 'error', 'message' => 'Failed to add subject: ' . $stmt->error]);
+}
+
+$stmt->close();
+$conn->close();
+?>
