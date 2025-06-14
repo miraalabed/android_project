@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp">
+    <TextView
+        android:id="@+id/textTitle"
+        android:text="Send Survey"
+        style="@style/titleText"
+        />
+
+    <EditText android:id="@+id/etSurveyTitle"
+        android:hint="Survey Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:textColor="#000000"
+        android:padding="12dp"
+        android:textSize="16sp"/>
+
+    <EditText android:id="@+id/etSurveyQuestion"
+        android:hint="Survey Question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:textColor="#000000"
+        android:padding="12dp"
+        android:textSize="16sp"/>
+
+    <EditText android:id="@+id/etStudentId"
+        android:hint="Student ID"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:textColor="#000000"
+        android:padding="12dp"
+        android:textSize="16sp"/>
+
+    <TextView android:id="@+id/tvSurveyDate"
+        android:text="Pick Date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:background="@android:color/white"
+        android:textColor="#000000"/>
+
+    <Button
+        android:id="@+id/btnSendSurvey"
+        android:text="Send Survey"
+       style="@style/Button"/>
+
+</LinearLayout>
