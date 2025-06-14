@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:id="@+id/back_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_back_arrow"
+                android:contentDescription="Back"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Assignment Details"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#008080"
+                android:layout_marginStart="12dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvAssignmentTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Assignment Title"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#008080"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvAssignmentDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Assignment description here..."
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvAssignmentDueDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Due: YYYY-MM-DD"
+            android:textSize="14sp"
+            android:textColor="#777777"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/etReplyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Your answer (required if no file)"
+            android:minLines="4"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginBottom="12dp"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnChooseFile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_file"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp"
+            android:gravity="start|center_vertical"
+            android:padding="12dp"
+            android:backgroundTint="#008080" />
+
+
+        <Button
+            android:id="@+id/btnSubmitReply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit Reply"
+            android:backgroundTint="#008080"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="start"
+            android:paddingHorizontal="24dp" />
+    </LinearLayout>
+</ScrollView>

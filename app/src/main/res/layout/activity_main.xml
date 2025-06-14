@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    android:padding="16dp"
+    android:fillViewport="true"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/student_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/student"
+                android:layout_marginEnd="16dp"
+                />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/student_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Full Name"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#008080" />
+
+                <TextView
+                    android:id="@+id/student_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID: 123456"
+                    android:textSize="14sp"
+                    android:textColor="#555555" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_surveys"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#008080"
+            android:textColor="#FFFFFF"
+            android:drawableLeft="@drawable/ic_survey"
+            android:text="Surveys"
+            android:gravity="start|center_vertical"
+            android:drawablePadding="8dp"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:id="@+id/btn_agenda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#008080"
+            android:textColor="#FFFFFF"
+            android:drawableLeft="@drawable/ic_calendar"
+            android:text="Agenda"
+            android:gravity="start|center_vertical"
+            android:drawablePadding="8dp"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btn_news"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#008080"
+            android:textColor="#FFFFFF"
+            android:drawableLeft="@drawable/ic_news"
+            android:text="News"
+            android:gravity="start|center_vertical"
+            android:drawablePadding="8dp"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btn_announcements"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#008080"
+            android:textColor="#FFFFFF"
+            android:drawableLeft="@drawable/ic_announcement"
+            android:text="Announcements"
+            android:gravity="start|center_vertical"
+            android:drawablePadding="8dp"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btn_plan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#008080"
+            android:textColor="#FFFFFF"
+            android:drawableLeft="@drawable/ic_plan"
+            android:text="Preparation Plan"
+            android:gravity="start|center_vertical"
+            android:drawablePadding="8dp"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btn_resources"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#008080"
+            android:textColor="#FFFFFF"
+            android:drawableLeft="@drawable/ic_books"
+            android:text="Learning Resources"
+            android:gravity="start|center_vertical"
+            android:drawablePadding="8dp"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btn_messages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#008080"
+            android:textColor="#FFFFFF"
+            android:drawableLeft="@drawable/ic_mail"
+            android:text="Messages"
+            android:gravity="start|center_vertical"
+            android:drawablePadding="8dp"
+            android:layout_marginTop="8dp" />
+
+
+        <Button
+            android:id="@+id/btn_schedules"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#008080"
+            android:textColor="#FFFFFF"
+            android:drawableLeft="@drawable/ic_schedule"
+            android:text="Schedules"
+            android:gravity="start|center_vertical"
+            android:drawablePadding="8dp"
+            android:layout_marginTop="8dp" />
+
+
+
+        <Button
+            android:id="@+id/btn_homework"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#008080"
+            android:textColor="#FFFFFF"
+            android:drawableLeft="@drawable/ic_homework"
+            android:text="Homework"
+            android:gravity="start|center_vertical"
+            android:drawablePadding="8dp"
+            android:layout_marginTop="8dp" />
+
+
+
+        <Button
+            android:id="@+id/btn_exams"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#008080"
+            android:textColor="#FFFFFF"
+            android:drawableLeft="@drawable/ic_exam"
+            android:text="Exams"
+            android:gravity="start|center_vertical"
+            android:drawablePadding="8dp"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btn_mark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#008080"
+            android:textColor="#FFFFFF"
+            android:drawableLeft="@drawable/ic_posts"
+            android:text="Mark"
+            android:gravity="start|center_vertical"
+            android:drawablePadding="8dp"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btn_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#008080"
+            android:textColor="#FFFFFF"
+            android:drawableLeft="@drawable/ic_profile1"
+            android:text="Account Settings"
+            android:gravity="start|center_vertical"
+            android:drawablePadding="8dp"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

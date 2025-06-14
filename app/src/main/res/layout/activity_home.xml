@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#ffffff">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:src="@drawable/schoologo1"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#ffffff"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="40dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🎯 App Goal"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#008080"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="10sp"
+                android:text="A smart educational platform designed to enhance communication between students and teachers, providing digital services such as timetables, assignments, grades, and notifications with an easy-to-use interface."
+                android:textSize="16sp"
+                android:textColor="#555"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⭐ App Features"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#008080"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:gravity="left"
+                android:lineSpacingExtra="10sp"
+                android:text="📅 Daily timetable\n📝 Assignments and tasks\n📊 Reports and grades\n🧑‍🏫 Communicate with teachers"
+                android:textColor="#444"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔒 Privacy and Data Policy"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#008080"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="User data is kept secure:\n\n• Student data is not shared with third parties.\n• The app adheres to the highest privacy and security standards."
+                android:textSize="16sp"
+                android:textColor="#555"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🛠️ Who developed the app?"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#008080"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The app was developed by the technology team at Al-Amal School, in collaboration with local developers specialized in educational apps."
+                android:textSize="16sp"
+                android:textColor="#555"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📞 Contact Us"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#008080"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="10sp"
+                android:text="📧 support@schoolhub.edu\n📞 0599-666-333\n🌐 www.schoolhub.edu"
+                android:textSize="14sp"
+                android:textColor="#008080"
+                android:gravity="center"
+                android:layout_marginBottom="16dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btn_login"
+           style="@style/Button"
+            android:text="@string/log_in"
+             />
+
+    </LinearLayout>
+
+</LinearLayout>

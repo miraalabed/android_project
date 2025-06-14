@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:elevation="2dp"
+    android:layout_margin="8dp"
+    android:padding="12dp"
+    android:layout_marginBottom="12dp"
+    android:backgroundTint="#FFFFFF"
+    android:clipToPadding="false">
+
+    <TextView
+        android:id="@+id/tvAssignmentTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Assignment Title"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#008080" />
+
+    <TextView
+        android:id="@+id/tvAssignmentDueDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Due: 2025-06-15"
+        android:textSize="14sp"
+        android:textColor="#888888"
+        android:layout_marginTop="4dp" />
+
+    <Button
+        android:id="@+id/btnReply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reply"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#008080"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="20dp"
+        android:layout_gravity="start" />
+</LinearLayout>
